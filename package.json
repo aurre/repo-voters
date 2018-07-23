@@ -22,7 +22,7 @@
   "scripts": {
     "client": "react-scripts start",
     "server": "nodemon app.js",
-    "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "start": "NODE_ENV='development' concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
