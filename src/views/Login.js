@@ -28,7 +28,7 @@ class Login extends React.Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.error = '';
-        axios.post('http://js-most-popular-framework.herokuapp.com/users/login', {
+        axios.post('http://repo-voters.herokuapp.com/users/login', {
             username: this.state.username,
             password: this.state.password
         })

@@ -1,16 +1,11 @@
 'use strict'
-// const jsonServer = require('json-server');
-// const server = jsonServer.create();
-// const router = jsonServer.router('server/db.json')
-// const middlewares = jsonServer.defaults();
+
 const db = require('./db.json');
 const fs = require('fs');
 const express = require('express');
 const router = express.Router()
 const bodyParser = require('body-parser')
 
-// server.use(middlewares);
-// server.use(jsonServer.bodyParser);
 
 
 router.use(bodyParser.urlencoded({ extended: false }))
@@ -57,11 +52,6 @@ router.post('/repos', (req, res, next) => {
         res.sendStatus(401);
     }
 });
-
-// server.use(router);
-// server.listen(4000, () => {
-//     console.log(`JSON Server is running`);
-// })
 
 function isAuthorized(req) {
     return req.headers.authorization === 'Super secret token';
