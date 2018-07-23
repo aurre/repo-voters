@@ -15,21 +15,19 @@ const styles = {
 }
 
 const NavBar = (props) => {
-    const { classes } = props;
+    const { classes, history } = props;
     const user = localStorage.user && JSON.parse(localStorage.user)
     const isLoggedIn = user && user.token;
 
     const handleLogoutClick = () => {
         localStorage.removeItem('user');
-        this.props.history.push('/login');
+        history.push('/login');
     }
 
 
     let button;
     if (isLoggedIn) {
-        button = <Button onClick={handleLogoutClick}>Logout</Button>
-    } else {
-        button = <Button>Login</Button>
+        button = <Button color="secondary" onClick={handleLogoutClick}>Logout</Button>
     }
 
     return (

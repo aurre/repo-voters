@@ -1,0 +1,9 @@
+.card {
+    width: min-content
+}
+
+.stat {
+    display: inline-block;
+    white-space: nowrap;
+    margin: 4px 0;
+}

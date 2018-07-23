@@ -4,7 +4,6 @@ import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Login from './views/Login';
 import Dashboard from './views/dashboard';
-
 import NavBar from './components/NavBar';
 
 
@@ -30,7 +29,7 @@ class App extends Component {
       <div className={classes.root}>
         <Router>
           <div>
-            <NavBar></NavBar>
+            <NavBar history={this.props.history}></NavBar>
             <Route path='/login' component={Login} />
             <PrivateRoute path='/' component={Dashboard} />
           </div>
