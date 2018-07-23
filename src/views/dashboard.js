@@ -52,13 +52,11 @@ class Dashboard extends Component {
                 <h1> Dashboard </h1>
                 <Repos repos={this.props.repos} />
                 <br />
-                <div className="root">
-                    <Grid container spacing={8}>
-                        <OpenIssuesChart />
-                        <ForksChart />
-                        <StarsChart />
-                    </Grid>
-                </div>
+                <Grid container spacing={8} className="root">
+                    <OpenIssuesChart />
+                    <ForksChart />
+                    <StarsChart />
+                </Grid>
             </div>
         )
     }
