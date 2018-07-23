@@ -1,0 +1,12 @@
+.main {
+    margin-top: 1rem;
+}
+
+.card {
+    max-width: 400;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+}

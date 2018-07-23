@@ -6,8 +6,8 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import axios from 'axios'
-
+import axios from 'axios';
+import './Login.css';
 
 class Login extends React.Component {
     constructor(props) {
@@ -43,11 +43,11 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="main">
                 <form noValidate autoComplete="off" onSubmit={this.handleSubmit}>
 
-                    <Card>
-                        <CardHeader title="Login"></CardHeader>
+                    <Card className="card">
+                        <CardHeader title="Login" className="header"></CardHeader>
                         <CardContent>
                             <TextField
                                 id="username"
