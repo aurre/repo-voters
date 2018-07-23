@@ -1,14 +1,22 @@
-const jsonServer = require('json-server');
-const server = jsonServer.create();
-const router = jsonServer.router('server/db.json')
-const middlewares = jsonServer.defaults();
+'use strict'
+// const jsonServer = require('json-server');
+// const server = jsonServer.create();
+// const router = jsonServer.router('server/db.json')
+// const middlewares = jsonServer.defaults();
 const db = require('./db.json');
 const fs = require('fs');
+const express = require('express');
+const router = express.Router()
+const bodyParser = require('body-parser')
 
-server.use(middlewares);
-server.use(jsonServer.bodyParser);
+// server.use(middlewares);
+// server.use(jsonServer.bodyParser);
 
-server.post('/login', (req, res, next) => {
+
+router.use(bodyParser.urlencoded({ extended: false }))
+router.use(bodyParser.json())
+
+router.post('/login', (req, res, next) => {
     const users = readUsers();
     const user = users.find(u => u.username === req.body.username && u.password === req.body.password);
 
@@ -25,7 +33,7 @@ server.post('/login', (req, res, next) => {
     }
 });
 
-server.get('/repos', (req, res, next) => {
+router.get('/repos', (req, res, next) => {
     if (isAuthorized(req)) {
         res.send(readRepos());
     } else {
@@ -33,7 +41,7 @@ server.get('/repos', (req, res, next) => {
     }
 });
 
-server.post('/repos', (req, res, next) => {
+router.post('/repos', (req, res, next) => {
     if (isAuthorized(req)) {
         const dbRaw = JSON.parse(fs.readFileSync('./server/db.json'));
         const repo = dbRaw.repos.find(r => r.id === req.body.repoId);
@@ -50,10 +58,10 @@ server.post('/repos', (req, res, next) => {
     }
 });
 
-server.use(router);
-server.listen(4000, () => {
-    console.log(`JSON Server is running`);
-})
+// server.use(router);
+// server.listen(4000, () => {
+//     console.log(`JSON Server is running`);
+// })
 
 function isAuthorized(req) {
     return req.headers.authorization === 'Super secret token';
@@ -68,3 +76,5 @@ function readUsers() {
     const dbRaw = fs.readFileSync('./server/db.json');
     return JSON.parse(dbRaw).users
 }
+
+module.exports = router

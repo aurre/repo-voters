@@ -42,7 +42,7 @@ class RepoDetail extends Component {
             userId: user && user.id
         }
 
-        axios.post('https://repo-voters.herokuapp.com:4000/repos', payload, {
+        axios.post('http://js-most-popular-framework.herokuapp.com/users/repos', payload, {
             headers: {
                 authorization: user && user.token
             }

@@ -11,7 +11,7 @@ class Dashboard extends Component {
 
     async componentDidMount() {
         const user = localStorage.user && JSON.parse(localStorage.user);
-        return axios.get("https://repo-voters.herokuapp.com:4000/repos", {
+        return axios.get(`http://js-most-popular-framework.herokuapp.com/users/repos`, {
             headers: {
                 authorization: user && user.token
             }
@@ -24,7 +24,7 @@ class Dashboard extends Component {
     render() {
         return (
             <div>
-                <h1> Dashboard works </h1>
+                <h1> Dashboard </h1>
                 <Repos repos={this.props.repos} />
             </div>
         )
