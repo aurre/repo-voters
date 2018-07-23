@@ -11,7 +11,7 @@ class Dashboard extends Component {
 
     async componentDidMount() {
         const user = localStorage.user && JSON.parse(localStorage.user);
-        return axios.get("http://repo-voters.herokuapp.com:4000/repos", {
+        return axios.get("https://repo-voters.herokuapp.com:4000/repos", {
             headers: {
                 authorization: user && user.token
             }
