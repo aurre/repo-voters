@@ -1,12 +1,14 @@
 import {
     SET_LOADING,
     GET_REPOS_SUCCESS,
-    VOTE
+    VOTE,
+    REPOS_INFO_GITHUB
 } from './actions'
 
 const initialState = {
     isLoading: false,
-    repos: []
+    repos: [],
+    reposInfoFromGithub: []
 }
 function reducer(state = initialState, action) {
     switch (action.type) {
@@ -29,7 +31,10 @@ function reducer(state = initialState, action) {
             return {
                 ...state,
                 repos
-            }
+            };
+        case REPOS_INFO_GITHUB:
+            console.log(action.payload)
+            return { ...state, reposInfoFromGithub: action.payload }
         default:
             return state
     }

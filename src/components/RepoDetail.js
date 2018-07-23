@@ -18,7 +18,6 @@ class RepoDetail extends Component {
     state = {};
     constructor(props) {
         super(props);
-        console.log(props);
     }
 
     async componentDidMount() {

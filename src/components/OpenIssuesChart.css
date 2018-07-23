@@ -1,0 +1,9 @@
+.root {
+    flex-grow: 1
+}
+
+.chartCard {
+    width: 20%;
+   display: 'flex',
+    
+}
