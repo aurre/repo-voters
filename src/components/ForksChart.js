@@ -5,6 +5,7 @@ import {
 } from 'victory';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
+import './OpenIssuesChart.css';
 
 
 
@@ -42,7 +43,7 @@ class ForksChart extends React.Component {
                 <CardHeader
                     title="Forks"
                 />
-                <VictoryChart height={400} width={400}
+                <VictoryChart height={300} width={400}
                     domainPadding={{ x: 50, y: [0, 20] }}
                 >
                     <VictoryBar

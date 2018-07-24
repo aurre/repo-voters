@@ -1,9 +1,4 @@
-.root {
-    justify-content: space-evenly
-}
-
 .chartCard {
     width: 20%;
-   display: 'flex',
-    
+   display: 'flex';
 }
