@@ -27,12 +27,12 @@ app.use('/users', usersRouter)
 
 
 // static file-serving middleware
-// app.use(express.static(path.join(__dirname, '..', 'public')))
+app.use(express.static(path.join(__dirname, '/public')))
 
 // sends index.html
-// app.use('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, '..', 'public/index.html'))
-// })
+app.use('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/index.html'))
+})
 
 
 if (!module.parent) app.listen(PORT, () => {
