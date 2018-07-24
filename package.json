@@ -20,20 +20,11 @@
     "victory": "^30.0.0"
   },
   "scripts": {
-<<<<<<< HEAD
     "build-client": "webpack",
     "build-client-watch": "webpack -w",
     "start": "node server",
     "start-dev": "NODE_ENV='development' npm run build-client-watch & npm run start-server",
     "start-server": "nodemon server -e html,js,scss --ignore public --ignore client"
-=======
-    "client": "react-scripts start",
-    "server": "nodemon app.js",
-    "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
->>>>>>> release
   },
   "devDependencies": {
     "@babel/polyfill": "^7.0.0-beta.40",
