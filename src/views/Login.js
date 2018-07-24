@@ -27,7 +27,7 @@ class Login extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.error = '';
+        // this.state.error = '';
         axios.post('http://localhost:8080/login', {
             username: this.state.username,
             password: this.state.password
@@ -37,7 +37,8 @@ class Login extends React.Component {
                 this.props.history.push('/');
             })
             .catch(err => {
-                this.error = 'Invalid username and/or password';
+                // this.state.error = 'Invalid username and/or password';
+                this.setState({ error: 'Invalid username and/or password' })
             });
     }
 
@@ -69,6 +70,7 @@ class Login extends React.Component {
                             <Button size="small" color="primary" type="submit">
                                 Login
                         </Button>
+                            {this.state.error && <div> {this.state.error} </div>}
                         </CardActions>
                     </Card>
                 </form>
