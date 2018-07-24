@@ -30,9 +30,9 @@ app.use('/users', usersRouter)
 app.use(express.static(path.join(__dirname, '..', 'public')))
 
 // sends index.html
-// app.use('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, '..', 'public/index.html'))
-// })
+app.use('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public/index.html'))
+})
 
 
 if (!module.parent) app.listen(PORT, () => {
