@@ -2,31 +2,31 @@
     "users": [
         {
             "id": 1,
-            "name": "Raysa",
+            "name": "raysa",
             "username": "raysa",
             "password": "123456"
         },
         {
             "id": 2,
-            "name": "Cody",
+            "name": "cody",
             "username": "cody",
             "password": "123456"
         },
         {
             "id": 3,
-            "name": "Cloe",
+            "name": "cloe",
             "username": "cloe",
             "password": "123456"
         },
         {
             "id": 4,
-            "name": "Murphy",
+            "name": "murphy",
             "username": "murphy",
             "password": "123456"
         },
         {
             "id": 5,
-            "name": "Claudia",
+            "name": "claudia",
             "username": "claudia",
             "password": "123456"
         }
