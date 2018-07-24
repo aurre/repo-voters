@@ -19,7 +19,7 @@ class Dashboard extends Component {
 
     async componentDidMount() {
         const user = localStorage.user && JSON.parse(localStorage.user);
-        await axios.get(`http://localhost:8080/users/repos`, {
+        await axios.get(`http://localhost:8080/repos`, {
             headers: {
                 authorization: user && user.token
             }

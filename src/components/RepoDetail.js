@@ -41,7 +41,7 @@ class RepoDetail extends Component {
             userId: user && user.id
         }
 
-        axios.post('http://localhost:8080/users/repos', payload, {
+        axios.post('http://localhost:8080/repos', payload, {
             headers: {
                 authorization: user && user.token
             }
