@@ -1,1 +1,58 @@
-{"users":[{"id":1,"name":"Raysa","username":"Raysa","password":"123"},{"id":2,"name":"Cody","username":"Cody","password":"123"},{"id":3,"name":"Cloe","username":"Cloe","password":"123"},{"id":4,"name":"Murphy","username":"Murphy","password":"123"},{"id":5,"name":"Claudia","username":"Claudia","password":"123"}],"repos":[{"id":1,"url":"vuejs/vue","votes":[]},{"id":2,"url":"facebook/react","votes":[]},{"id":3,"url":"angular/angular.js","votes":[1]},{"id":4,"url":"emberjs/ember.js","votes":[]}]}
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Raysa",
+            "username": "raysa",
+            "password": "123456"
+        },
+        {
+            "id": 2,
+            "name": "Cody",
+            "username": "cody",
+            "password": "123456"
+        },
+        {
+            "id": 3,
+            "name": "Cloe",
+            "username": "cloe",
+            "password": "123456"
+        },
+        {
+            "id": 4,
+            "name": "Murphy",
+            "username": "murphy",
+            "password": "123456"
+        },
+        {
+            "id": 5,
+            "name": "Claudia",
+            "username": "claudia",
+            "password": "123456"
+        }
+    ],
+    "repos": [
+        {
+            "id": 1,
+            "url": "vuejs/vue",
+            "votes": []
+        },
+        {
+            "id": 2,
+            "url": "facebook/react",
+            "votes": []
+        },
+        {
+            "id": 3,
+            "url": "angular/angular.js",
+            "votes": [
+                1
+            ]
+        },
+        {
+            "id": 4,
+            "url": "emberjs/ember.js",
+            "votes": []
+        }
+    ]
+}
