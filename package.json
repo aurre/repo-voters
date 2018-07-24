@@ -27,16 +27,18 @@
     "start-server": "nodemon server -e html,js,scss --ignore public --ignore client"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.40",
     "@babel/polyfill": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "@babel/preset-react": "^7.0.0-beta.40",
+    "@babel/preset-stage-2": "^7.0.0-beta.40",
+    "@babel/register": "^7.0.0-beta.40",
+    "babel-loader": "^8.0.0-beta.2",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.7.0",
     "nodemon": "^1.12.1",
     "webpack": "^4.0.1",
     "webpack-cli": "^2.0.9",
-    "@babel/preset-env": "^7.0.0-beta.40",
-    "@babel/preset-react": "^7.0.0-beta.40",
-    "@babel/preset-stage-2": "^7.0.0-beta.40",
-    "@babel/register": "^7.0.0-beta.40",
-    "@babel/core": "^7.0.0-beta.40"
+    "css-loader": "^0.28.11"
   }
 }

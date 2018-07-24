@@ -5,7 +5,8 @@ const bodyParser = require('body-parser')
 const compression = require('compression')
 const db = require('./db.json')
 const PORT = process.env.PORT || 8080
-const app = express()
+const app = express();
+const fs = require('fs')
 module.exports = app
 
 const createApp = () => {

@@ -18,6 +18,7 @@ const styles = {
 const NavBar = (props) => {
     const { classes, history } = props;
     const user = localStorage.user && JSON.parse(localStorage.user)
+    console.log(localStorage.user)
     const isLoggedIn = user && user.token;
 
     const handleLogoutClick = () => {
