@@ -106297,8 +106297,7 @@ var styles = {
 var NavBar = function NavBar(props) {
   var classes = props.classes,
       history = props.history;
-  var user = localStorage.user && JSON.parse(localStorage.user);
-  console.log(localStorage.user);
+  var user = localStorage.user && JSON.parse(localStorage.user || '');
   var isLoggedIn = user && user.token;
 
   var handleLogoutClick = function handleLogoutClick() {
@@ -107276,7 +107275,7 @@ function (_React$Component) {
       e.preventDefault();
       _this.error = '';
 
-      _axios.default.post('http://localhost:8080/users/login', {
+      _axios.default.post('/login', {
         username: _this.state.username,
         password: _this.state.password
       }).then(function (res) {
@@ -107468,7 +107467,7 @@ function (_Component) {
               case 0:
                 user = localStorage.user && JSON.parse(localStorage.user);
                 _context2.next = 3;
-                return _axios.default.get("http://localhost:8080/users/repos", {
+                return _axios.default.get("/repos", {
                   headers: {
                     authorization: user && user.token
                   }
