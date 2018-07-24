@@ -6,6 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import './Navbar.css'
 
 
 const styles = {
@@ -27,7 +28,7 @@ const NavBar = (props) => {
 
     let button;
     if (isLoggedIn) {
-        button = <Button color="secondary" onClick={handleLogoutClick}>Logout</Button>
+        button = <Button className="button" onClick={handleLogoutClick}>Logout</Button>
     }
 
     return (

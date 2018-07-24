@@ -29,8 +29,8 @@ class StarsChart extends React.Component {
                         standalone={false}
                         width={400} height={400}
                         data={data}
-                        innerRadius={68} labelRadius={100}
-                        style={{ labels: { fontSize: 20, fill: "white" } }}
+                        innerRadius={68} labelRadius={90}
+                        style={{ labels: { fontSize: 15, fill: "white" } }}
                     />
                     <VictoryLabel
                         textAnchor="middle"

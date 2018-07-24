@@ -33,7 +33,6 @@ function reducer(state = initialState, action) {
                 repos
             };
         case REPOS_INFO_GITHUB:
-            console.log(action.payload)
             return { ...state, reposInfoFromGithub: action.payload }
         default:
             return state

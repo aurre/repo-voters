@@ -47,9 +47,12 @@ class Dashboard extends Component {
     }
 
     render() {
+
+        const user = localStorage.user && JSON.parse(localStorage.user);
+
         return (
             <div>
-                <h1> Dashboard </h1>
+                <h1> {`Welcome ${user.name}, choose wisely and vote for your favorite`}</h1>
                 <Repos repos={this.props.repos} />
                 <br />
                 <Grid container spacing={8} className="root">
