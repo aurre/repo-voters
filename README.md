@@ -5,9 +5,9 @@ You can also vote for your favorite, BUT choose wisely, you can not take your vo
 
 ### How to run the app locally 
 ```sh
- $ - Clone this repo to your local machin 
- $ - Run `npm install`
- $ - Run `npm start`
+ $ Clone this repo to your local machin 
+ $ Run `npm install`
+ $ Run `npm start`
  ```
 
 ### Direction on how to use this app
