@@ -3,7 +3,7 @@
 This project shows the top 4 JavaScript frameworks for building beautiful and responsive UI on the web.
 You can also vote for your favorite, BUT choose wisely, you can not take your vote back.
 
-* See deployed app at http://jsframeworks.raysa.me:3000/
+* See deployed app at http://jsframeworks.raysa.me/
 
 ### How to run the app locally 
 ```sh
