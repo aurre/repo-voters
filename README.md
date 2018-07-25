@@ -18,7 +18,7 @@ This app has as a DB a JSON file where you can find some users that are already 
 | -------- | -------- |
 | claudia  |   123456    |           
 |  cody    |   123456    |
-|  curphy  |   123456    |
+|  murphy  |   123456    |
 
 When you login into the app you can see a dashboard with some relevant information about each framework, and if you have not voted yet you can go ahead and leave a vote for your favorite JS framework, but remember you are able to vote just once.
 
