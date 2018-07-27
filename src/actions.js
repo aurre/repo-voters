@@ -1,3 +1,4 @@
+
 /*
  * action types
  */
@@ -19,14 +20,14 @@ export function getRepos() {
     return { type: GET_REPOS }
 }
 
-export function getReposSuccess() {
-    return { type: GET_REPOS_SUCCESS, payload: [] }
+export function getReposSuccess(payload) {
+    return { type: GET_REPOS_SUCCESS, payload }
 }
 
 export function getReposFailed() {
     return { type: GET_REPOS_FAILED }
 }
 
-export function getRepoInfoGithub() {
-    return { type: REPOS_INFO_GITHUB, payload: [] }
+export function getRepoInfoGithub(payload) {
+    return { type: REPOS_INFO_GITHUB, payload }
 }

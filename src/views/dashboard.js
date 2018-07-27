@@ -7,6 +7,7 @@ import OpenIssuesChart from '../components/OpenIssueChart';
 import ForksChart from '../components/ForksChart';
 import StarsChart from '../components/StarsChart';
 import Grid from '@material-ui/core/Grid';
+import {getReposSuccess, getRepoInfoGithub} from '../actions';
 import './dashboard.css'
 
 const BASE_URI = 'https://api.github.com/search/repositories';
@@ -26,7 +27,7 @@ class Dashboard extends Component {
             }
         })
             .then(response => {
-                store.dispatch({ type: 'GET_REPOS_SUCCESS', payload: response.data })
+                store.dispatch(getReposSuccess(response.data))
             });
         await this.getFrameworks();
 
@@ -39,7 +40,7 @@ class Dashboard extends Component {
 
         let reposGithubInfo = await axios.get(`${BASE_URI}?q=${q}`)
 
-        store.dispatch({ type: 'REPOS_INFO_GITHUB', payload: reposGithubInfo.data.items })
+        store.dispatch(getRepoInfoGithub(reposGithubInfo.data.items))
 
         setTimeout(() => {
             this.getFrameworks();

@@ -6,6 +6,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import axios from 'axios';
+import {connect} from 'react-redux'
 
 import store from '../store'
 
@@ -55,6 +56,8 @@ class RepoDetail extends Component {
     }
 
     render() {
+        const repoInfo = this.props.reposInfoFromGithub[0]
+
         return (
             <Card className="card">
                 <CardHeader avatar={<Avatar alt={this.state.name} src={this.state.avatar} />} title={`Votes: ${this.props.repo.votes.length}`} subheader={this.state.name}>
@@ -77,4 +80,8 @@ class RepoDetail extends Component {
     }
 }
 
-export default RepoDetail;
+const mapToProps = (state) => ({
+    reposInfoFromGithub: state.reposInfoFromGithub
+})
+
+export default connect (mapToProps, null)(RepoDetail);
