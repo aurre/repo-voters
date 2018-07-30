@@ -53,7 +53,7 @@ class Dashboard extends Component {
 
         return (
             <div>
-                <h1> {`Welcome ${user.name}, choose wisely and vote for your favorite`}</h1>
+                <h1> {`Welcome ${user.name[0].toUpperCase()}${user.name.slice(1)}, choose wisely and vote for your favorite`}</h1>
                 <Repos repos={this.props.repos} />
                 <br />
                 <Grid className="root">
