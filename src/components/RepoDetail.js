@@ -48,6 +48,7 @@ class RepoDetail extends Component {
             }
         }).then(res => {
             // dispatch
+            console.log('PAYLOAD ===>', payload)
             store.dispatch({ type: 'VOTE', payload });
         }
 
@@ -85,3 +86,5 @@ const mapToProps = (state) => ({
 })
 
 export default connect (mapToProps, null)(RepoDetail);
+
+
