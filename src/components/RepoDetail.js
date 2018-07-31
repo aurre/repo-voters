@@ -9,6 +9,7 @@ import axios from 'axios';
 import {connect} from 'react-redux'
 
 import store from '../store'
+import { upVote } from '../actions';
 
 import "./RepoDetail.css";
 
@@ -48,8 +49,7 @@ class RepoDetail extends Component {
             }
         }).then(res => {
             // dispatch
-            console.log('PAYLOAD ===>', payload)
-            store.dispatch({ type: 'VOTE', payload });
+            store.dispatch(upVote(payload));
         }
 
         )

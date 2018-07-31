@@ -31,3 +31,7 @@ export function getReposFailed() {
 export function getRepoInfoGithub(payload) {
     return { type: REPOS_INFO_GITHUB, payload }
 }
+
+export function upVote(payload) {
+    return {type: VOTE, payload}
+}
