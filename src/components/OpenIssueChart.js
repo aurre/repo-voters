@@ -30,6 +30,7 @@ class OpenIssuesChart extends React.Component {
                 <VictoryChart
                     // adding the material theme provided with Victory
                     domainPadding={20}
+                    theme={VictoryTheme.material}
                 >
                     <VictoryAxis
                         tickValues={[1, 2, 3, 4]}

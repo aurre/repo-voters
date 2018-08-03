@@ -1,4 +1,3 @@
 .chartCard {
-    width: 20%;
-   display: 'flex';
+    height: fit-content;
 }

@@ -5,8 +5,7 @@ import {
 } from 'victory';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
-import './OpenIssuesChart.css'
-
+import './StarsChart.css';
 
 
 
@@ -20,7 +19,7 @@ class StarsChart extends React.Component {
             }
         })
         return (
-            <Card className="chartCard">
+            <Card className="chart">
                 <CardHeader
                     title="Stars"
                 />

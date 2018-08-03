@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import axios from 'axios';
+import store from '../store';
+import { upVote } from '../actions';
+import './RepoDetail.css';
+
 import Avatar from '@material-ui/core/Avatar';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader'
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
-import axios from 'axios';
-import {connect} from 'react-redux'
 
-import store from '../store'
-import { upVote } from '../actions';
 
-import "./RepoDetail.css";
 
 const BASE_URI = 'https://api.github.com/search/repositories';
 
@@ -57,33 +58,40 @@ class RepoDetail extends Component {
     }
 
     render() {
-        const repoInfo = this.props.reposInfoFromGithub[0]
+        const currentRepo = this.props.reposInfoFromGithub.find(repo => {
+            return repo.full_name === this.props.repo.url
+        })
+        console.log('DETAILS =====>', currentRepo);
 
-        return (
-            <Card className="card">
-                <CardHeader avatar={<Avatar alt={this.state.name} src={this.state.avatar} />} title={`Votes: ${this.props.repo.votes.length}`} subheader={this.state.name}>
-                </CardHeader>
+        return <Card className="card">
+            <CardHeader avatar={<Avatar alt={this.state.name} src={this.state.avatar} />} title={`Votes: ${this.props.repo.votes.length}`} subheader={this.state.name} />
 
-                <CardContent>
-                    <p className="stat">Stargazers: <span>{this.state.stargazers_count}</span></p>
-                    <p className="stat">Forked: <span>{this.state.forks_count}</span></p>
-                    <p className="stat">Open Issues: <span>{this.state.open_issues_count}</span></p>
-                </CardContent>
+            <CardContent>
+              <p className="stat">
+                Stargazers: <span>{this.state.stargazers_count}</span>
+              </p>
+              <p className="stat">
+                Forked: <span>{this.state.forks_count}</span>
+              </p>
+              <p className="stat">
+                Open Issues: <span>{this.state.open_issues_count}</span>
+              </p>
+            </CardContent>
 
-                <CardActions>
-
-                    <Button size="small" color="primary" disabled={!this.props.canVote} onClick={this.handleVoteClick}>
-                        Vote
-                        </Button>
-                </CardActions>
-            </Card>
-        );
+            <CardActions>
+              <Button size="small" color="primary" disabled={!this.props.canVote} onClick={this.handleVoteClick}>
+                Vote
+              </Button>
+            </CardActions>
+          </Card>;
     }
 }
 
-const mapToProps = (state) => ({
-    reposInfoFromGithub: state.reposInfoFromGithub
-})
+const mapToProps = state => {
+  return {
+    reposInfoFromGithub: state.reposInfoFromGithub,
+  };
+};
 
 export default connect (mapToProps, null)(RepoDetail);
 

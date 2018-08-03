@@ -102,7 +102,7 @@ const createApp = () => {
         res.sendFile(path.join(__dirname, '..', 'public/index.html'))
     })
 
-    // error handling endware
+    // error handling middleware
     app.use((err, req, res, next) => {
         console.error(err)
         console.error(err.stack)

@@ -1,11 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import {
-    VictoryBar, VictoryChart, Bar
-} from 'victory';
+import { VictoryBar, VictoryChart, Bar, VictoryTheme } from 'victory';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
-import './OpenIssuesChart.css';
 
 
 
@@ -39,12 +36,13 @@ class ForksChart extends React.Component {
         })
 
         return (
-            <Card className="chartCard">
+            <Card >
                 <CardHeader
                     title="Forks"
                 />
                 <VictoryChart height={300} width={400}
                     domainPadding={{ x: 50, y: [0, 20] }}
+
                 >
                     <VictoryBar
                         dataComponent={
