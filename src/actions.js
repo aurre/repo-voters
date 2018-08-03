@@ -8,8 +8,6 @@ export const GET_REPOS = 'GET_REPOS'
 export const GET_REPOS_SUCCESS = 'GET_REPOS_SUCCESS'
 export const GET_REPOS_FAILED = 'GET_REPOS_FAILED'
 export const VOTE = 'VOTE'
-export const VOTE_SUCCESS = 'VOTE_SUCCESS'
-export const VOTE_FAILED = 'VOTE_FAILED'
 export const REPOS_INFO_GITHUB = 'REPOS_INFO_GITHUB'
 
 /*
